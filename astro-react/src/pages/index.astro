@@ -1,0 +1,45 @@
+---
+import FullPageLayout from '@/layouts/FullPageLayout.astro';
+import type { Page } from '@/types';
+import PageWrapper from '@/components/common/PageWrapper.tsx';
+import Navbar from "@/components/sections/global/Navbar";
+import Hero from "@/components/sections/home/Hero";
+import Feature from "@/components/sections/home/Feature";
+import HowItWorks from "@/components/sections/home/HowItWorks";
+import Stat from "@/components/sections/home/Stat";
+import Testimonial from "@/components/sections/home/Testimonial";
+import Integration from "@/components/sections/home/Integration";
+import Pricing from "@/components/sections/home/Pricing";
+import Cta from "@/components/sections/home/Cta";
+import Footer from "@/components/sections/global/Footer";
+
+
+const page = {
+  "seo": {
+    "title": "",
+    "description": ""
+  },
+  "id": "home",
+  "link": "home",
+  "sections": []
+} as Page;;
+---
+
+<FullPageLayout seo={page.seo}>
+  <PageWrapper
+    client:load
+    page={page}>
+    <!-- Page Sections -->
+    <Navbar client:load />
+<Hero client:load />
+<Feature client:load />
+<HowItWorks client:load />
+<Stat client:load />
+<Testimonial client:load />
+<Integration client:load />
+<Pricing client:load />
+<Cta client:load />
+<Footer client:load />
+
+  </PageWrapper>
+</FullPageLayout>

@@ -1,0 +1,33 @@
+---
+import FullPageLayout from '@/layouts/FullPageLayout.astro';
+import type { Page } from '@/types';
+import PageWrapper from '@/components/common/PageWrapper.tsx';
+import Navbar from "@/components/sections/global/Navbar";
+import Pricing from "@/components/sections/pricing/Pricing";
+import Testimonial from "@/components/sections/pricing/Testimonial";
+import Footer from "@/components/sections/global/Footer";
+
+
+const page = {
+  "seo": {
+    "title": "",
+    "description": ""
+  },
+  "id": "pricing",
+  "link": "pricing",
+  "sections": []
+} as Page;;
+---
+
+<FullPageLayout seo={page.seo}>
+  <PageWrapper
+    client:load
+    page={page}>
+    <!-- Page Sections -->
+    <Navbar client:load />
+<Pricing client:load />
+<Testimonial client:load />
+<Footer client:load />
+
+  </PageWrapper>
+</FullPageLayout>
