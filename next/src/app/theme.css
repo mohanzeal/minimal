@@ -1,0 +1,344 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-neutral: var(--neutral);
+  --color-neutral-foreground: var(--neutral-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* primary */
+
+  --color-primary-50: #f6f6f6;
+  --color-primary-100: #ededed;
+  --color-primary-200: #c9c9c9;
+  --color-primary-300: #a5a5a5;
+  --color-primary-400: #818181;
+  --color-primary-500: #4b4b4b;
+  --color-primary-600: #444444;
+  --color-primary-700: #353535;
+  --color-primary-800: #262626;
+  --color-primary-900: #171717;
+  --color-primary-950: #080808;
+
+  /* neutral */
+
+  --color-neutral-50: #fefeff;
+  --color-neutral-100: #fefefe;
+  --color-neutral-200: #fbfbfd;
+  --color-neutral-300: #f8f8fc;
+  --color-neutral-400: #f5f5fb;
+  --color-neutral-500: #f0f1f9;
+  --color-neutral-600: #d8d9e0;
+  --color-neutral-700: #a8a9ae;
+  --color-neutral-800: #78797d;
+  --color-neutral-900: #48484b;
+  --color-neutral-950: #181819;
+
+  /* secondary */
+
+  --color-secondary-50: #fbfbfb;
+  --color-secondary-100: #f6f6f6;
+  --color-secondary-200: #e5e5e5;
+  --color-secondary-300: #d4d4d4;
+  --color-secondary-400: #c3c3c3;
+  --color-secondary-500: #a9a9a9;
+  --color-secondary-600: #989898;
+  --color-secondary-700: #767676;
+  --color-secondary-800: #555555;
+  --color-secondary-900: #333333;
+  --color-secondary-950: #111111;
+
+  /* accent */
+
+  --color-accent-50: #fcfcf7;
+  --color-accent-100: #f8f9ef;
+  --color-accent-200: #ebeccf;
+  --color-accent-300: #dedfaf;
+  --color-accent-400: #d0d28e;
+  --color-accent-500: #bcbe5e;
+  --color-accent-600: #a9ab55;
+  --color-accent-700: #848542;
+  --color-accent-800: #5e5f2f;
+  --color-accent-900: #38391c;
+  --color-accent-950: #131309;
+
+  /* destructive */
+
+  --color-destructive-50: #fef6f6;
+  --color-destructive-100: #fceded;
+  --color-destructive-200: #f7c9c9;
+  --color-destructive-300: #f2a6a5;
+  --color-destructive-400: #ed8280;
+  --color-destructive-500: #e54c4a;
+  --color-destructive-600: #ce4443;
+  --color-destructive-700: #a03534;
+  --color-destructive-800: #732625;
+  --color-destructive-900: #451716;
+  --color-destructive-950: #170807;
+}
+
+@theme {
+  /* body font */
+  --font-display:
+    Mulish, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-size: 14px;
+
+  /* heading font */
+  --font-heading:
+    Mulish, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.text-inherit {
+  font-size: inherit;
+}
+
+body {
+  font-family: var(--font-display);
+  font-size: var(--font-size);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* this will help apply hero background to navbar */
+/* this class is applied on navbar when we toggle useHeroBg in the section metadata */
+.useHeroBg {
+  position: absolute !important;
+  background: transparent !important;
+  width: 100% !important;
+
+  & + section {
+    padding-top: 8rem !important;
+  }
+}
+
+:root {
+  --neutral: #f0f1f9;
+  --neutral-foreground: #000000;
+  --background: #fff;
+  --foreground: #262626;
+  --muted: #fbfbfd;
+  --muted-foreground: #000000;
+  --primary: #4b4b4bff;
+  --primary-foreground: #ffffff;
+  --secondary: #a9a9a9ff;
+  --secondary-foreground: #ffffff;
+  --accent: #bcbe5e;
+  --accent-foreground: #ffffff;
+  --destructive: #e54c4a;
+  --destructive-foreground: #ffffff;
+  --card: #fefefe;
+  --card-foreground: #000000;
+  --popover: #fefefe;
+  --popover-foreground: #000000;
+  --border: #f0f1f9;
+  --input: #f0f1f9;
+  --ring: #444444;
+  --chart-1: #444444;
+  --chart-2: #a9ab55;
+  --chart-3: #989898;
+  --chart-4: #818181;
+  --chart-5: #d0d28e;
+  --sidebar: #fefefe;
+  --sidebar-foreground: #fefefe;
+  --sidebar-primary: #444444;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f8f9ef;
+  --sidebar-accent-foreground: #f8f9ef;
+  --sidebar-border: #f8f8fc;
+  --sidebar-ring: #444444;
+  --font-sans: Gabriela, Geist Fallback, ui-sans-serif;
+  --font-serif: Gabriela, Geist Fallback, ui-serif;
+  --font-mono: Geist Mono, Geist Mono Fallback, ui-monospace;
+  --radius: 0.625rem;
+  --shadow-color: #38391c;
+}
+
+.dark {
+  --background: #000;
+  --foreground: #d9d9d9;
+  --muted: #78797d;
+  --muted-foreground: #ffffff;
+  --neutral: #f0f1f9;
+  --neutral-foreground: #000000;
+  --primary: #4b4b4b;
+  --primary-foreground: #ffffff;
+  --secondary: #a9a9a9;
+  --secondary-foreground: #ffffff;
+  --accent: #bcbe5e;
+  --accent-foreground: #ffffff;
+  --destructive: #ed8280;
+  --destructive-foreground: #ffffff;
+  --card: #48484b;
+  --card-foreground: #ffffff;
+  --popover: #48484b;
+  --popover-foreground: #ffffff;
+  --border: #78797d;
+  --input: #78797d;
+  --ring: #4b4b4b;
+  --chart-1: #4b4b4b;
+  --chart-2: #bcbe5e;
+  --chart-3: #a9a9a9;
+  --chart-4: #a5a5a5;
+  --chart-5: #dedfaf;
+  --sidebar: #48484b;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #4b4b4b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #5e5f2f;
+  --sidebar-accent-foreground: #f8f9ef;
+  --sidebar-border: #78797d;
+  --sidebar-ring: #4b4b4b;
+  --font-sans: Gabriela, Geist Fallback, ui-sans-serif;
+  --font-serif: Gabriela, Geist Fallback, ui-serif;
+  --font-mono: Geist Mono, Geist Mono Fallback, ui-monospace;
+  --radius: 0.625rem;
+  --shadow-color: #38391c;
+}
+
+@layer base {
+  body {
+    font-size: var(--text-sm);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-family:
+      var(--font-heading),
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      Apple Color Emoji,
+      Segoe UI Emoji,
+      Segoe UI Symbol,
+      Noto Color Emoji;
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-family:
+      var(--font-heading),
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      Apple Color Emoji,
+      Segoe UI Emoji,
+      Segoe UI Symbol,
+      Noto Color Emoji;
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-family:
+      var(--font-heading),
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      Apple Color Emoji,
+      Segoe UI Emoji,
+      Segoe UI Symbol,
+      Noto Color Emoji;
+    font-size: var(--text-xl);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-family:
+      var(--font-heading),
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      Apple Color Emoji,
+      Segoe UI Emoji,
+      Segoe UI Symbol,
+      Noto Color Emoji;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.3;
+  }
+
+  h5 {
+    font-family:
+      var(--font-heading),
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      Apple Color Emoji,
+      Segoe UI Emoji,
+      Segoe UI Symbol,
+      Noto Color Emoji;
+    font-size: var(--text-md);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.3;
+  }
+
+  h6 {
+    font-family:
+      var(--font-heading),
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      Apple Color Emoji,
+      Segoe UI Emoji,
+      Segoe UI Symbol,
+      Noto Color Emoji;
+    font-size: var(--text-base);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+  }
+}
+
+/* fix border issue, tailwind v4 not auto binding border color */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply border-border;
+  }
+}
