@@ -1,0 +1,31 @@
+---
+import FullPageLayout from '@/layouts/FullPageLayout.astro';
+import type { Page } from '@/types';
+import PageWrapper from '@/components/common/PageWrapper.vue';
+import Navbar from "@/components/sections/global/Navbar.vue";
+import Faq from "@/components/sections/faq/Faq.vue";
+import Footer from "@/components/sections/global/Footer.vue";
+
+
+const page = {
+  "seo": {
+    "title": "",
+    "description": ""
+  },
+  "id": "faq",
+  "link": "faq",
+  "sections": []
+} as Page;;
+---
+
+<FullPageLayout seo={page.seo}>
+  <PageWrapper
+    client:load
+    page={page}>
+    <!-- Page Sections -->
+    <Navbar client:load />
+<Faq client:load />
+<Footer client:load />
+
+  </PageWrapper>
+</FullPageLayout>
